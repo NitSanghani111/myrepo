@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <button id="playbtn">speak</button>
+
+    <script>
+        const speakbtn=document.querySelector("#playbtn");
+        const query = document.querySelector("#text");
+
+        speakbtn.addEventListener("click",playSpeech);
+
+        function playSpeech(){
+            const speech =new SpeechSynthesisUtterance(query.value);
+
+            speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
